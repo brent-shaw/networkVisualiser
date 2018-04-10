@@ -72,16 +72,16 @@ class Node():
 def testSetup():
     nets = Networks()
 
-    nets.addNetwork('Rhodes')
-    nets.addNetwork('Docker0')
+    nets.addNetwork('Net1')
+    nets.addNetwork('Net2')
 
-    nets.addNodeToNet('Rhodes', 'Pequod')
+    nets.addNodeToNet('Net1', 'Node1')
 
-    nets.addNodeToNet('Docker0', 'Pequod')
-    nets.addNodeToNet('Docker0', 'Modbus Server')
-    nets.addNodeToNet('Docker0', 'Modbus Client 1')
-    nets.addNodeToNet('Docker0', 'Modbus Client 2')
-    nets.addNodeToNet('Docker0', 'Modbus Client 3')
+    nets.addNodeToNet('Net2', 'Node1')
+    nets.addNodeToNet('Net2', 'Node2')
+    nets.addNodeToNet('Net2', 'Node2')
+    nets.addNodeToNet('Net2', 'Node2')
+    nets.addNodeToNet('Net2', 'Node2')
 
     return nets
 
@@ -110,7 +110,7 @@ def getLocalNetwork():
 
 
 nets = Networks()
-nets.addNetwork('Net')
+nets.addNetwork('Net1')
 
 localNodes = [n[2].split('.')[0] for n in getLocalNetwork()]
 
